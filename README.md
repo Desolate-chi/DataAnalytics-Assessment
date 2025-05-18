@@ -10,3 +10,19 @@ Write a query to find customers with at least one funded savings plan AND one fu
 3. The having function was used to filter out clients that do not have both accounts
 ## Challenges
 Confusion occurred in the saving and investment count which has boolean field and the option between the sum and count(distinct), i ended up with sum because it was more reliable
+## Question 2
+## Transaction Frequency Analysis
+## Task 
+Calculate the average number of transactions per customer per month and categorize them
+## Approach
+1. Created the categorizing column with case when
+2. Calculated the transaction total
+3. Found the average of the transcation total categorized by high, medium, low frequency
+## Challenges
+Because of the layering of the subquery i had to pay alot of attention to detail to ensure the alias are not
+1. mispelled incorrectly
+2. use repeatedly for different cases
+## Question 3
+## Account Inactivity Alert
+## Task 
+Find all active accounts (savings or investments) with no transactions in the last 1 year (365 days) .
