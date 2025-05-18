@@ -7,7 +7,7 @@ Write a query to find customers with at least one funded savings plan AND one fu
 1. Created the name column by usimg the concat function to create a new column
 2. Used the boolean from is_a_fund and is_regular_saving to determine with user have both accounts
 3. The having function was used to filter out clients that do not have both accounts
-## Challenges
+## Challenge
 Confusion occurred in the saving and investment count which has boolean field and the option between the sum and count(distinct), i ended up with sum because it was more reliable
 ## Question 2 : Transaction Frequency Analysis
 ## Task 
@@ -16,10 +16,16 @@ Calculate the average number of transactions per customer per month and categori
 1. Created the categorizing column with case when
 2. Calculated the transaction total
 3. Found the average of the transcation total categorized by high, medium, low frequency
-## Challenges
+## Challenge
 Because of the layering of the subquery i had to pay alot of attention to detail to ensure the alias are not
 1. mispelled incorrectly
 2. use repeatedly for different cases
 ## Question 3 : Account Inactivity Alert
 ## Task 
 Find all active accounts (savings or investments) with no transactions in the last 1 year (365 days) .
+## Approach
+1. Extract customer with the latest transaction date using the MAX function
+2. Found the difference between the current date and the latest date to find number of days inactive
+3. Filter those inactive for 365 days with either savings or investment plan
+## Challenge
+I was stuck between the use of DATEDIFF or TIMESTAMPDIFF both provided different result and it came down to what i was trying to achieve 
