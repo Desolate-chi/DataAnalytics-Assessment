@@ -1,6 +1,6 @@
 -- Estimate Customer Lifetime Value (CLV) based on tenure and transaction behavior
 SELECT u.id AS customer_id,CONCAT(u.first_name," ", u.last_name) AS name,
-    TIMESTAMPDIFF(MONTH, u.date_joined, CURDATE()) AS tenure_in_months,
+    TIMESTAMPDIFF(MONTH, u.date_joined, CURDATE()) AS tenure_months,
     COUNT(s.transaction_reference) AS total_transactions,
     ROUND((COUNT(s.transaction_reference) / 
     NULLIF(TIMESTAMPDIFF(MONTH, u.date_joined, CURDATE()), 0)) * 12 
