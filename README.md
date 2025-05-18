@@ -5,3 +5,8 @@ An assessment to evaluate my ability to work with relational databases by writin
 ## Task 
 Write a query to find customers with at least one funded savings plan AND one funded investment plan, sorted by total deposits.
 ## Approach
+1. Created the name column by usimg the concat function to create a new column
+2. Used the boolean from is_a_fund and is_regular_saving to determine with user have both accounts
+3. The having function was used to filter out clients that do not have both accounts
+## Challenges
+Confusion occurred in the saving and investment count which has boolean field and the option between the sum and count(distinct), i ended up with sum because it was more reliable
